@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  username: your_name
+  password: your_pass
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: toy_app
+
+production:
+  <<: *default
+  database: toy_app
+
+test:
+  <<: *default
+  database: toy_app_test
